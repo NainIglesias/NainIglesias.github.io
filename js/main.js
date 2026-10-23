@@ -1,4 +1,3 @@
-// Pinta una tarjeta por cada proyecto del array `projects` (definido en projects.js)
 function renderProjects() {
   const list = document.getElementById("projects-list");
 
@@ -27,7 +26,6 @@ function renderProjects() {
   });
 }
 
-// Pone el año actual en el footer
 function renderYear() {
   document.getElementById("year").textContent = new Date().getFullYear();
 }
