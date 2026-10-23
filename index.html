@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nain Iglesias · Backend Developer</title>
+  <meta name="description" content="Nain Iglesias, desarrollador backend en Vigo especializado en Symfony, APIs REST e IA.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="hero" id="inicio">
+    <div class="container">
+      <h1>Nain Iglesias</h1>
+      <p class="hero-role">Backend Developer · Symfony · IA</p>
+      <div class="hero-actions">
+        <a class="button" href="#proyectos">Ver proyectos</a>
+        <a class="button button-secondary" href="#contacto">Contacto</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="que-hago" aria-labelledby="que-hago-titulo">
+      <div class="container">
+        <h2 id="que-hago-titulo">Qué hago</h2>
+        <!-- Aquí irán las 3 tarjetas: APIs con Symfony, Docker y despliegue, agentes e IA -->
+      </div>
+    </section>
+
+    <section id="quien-soy" aria-labelledby="quien-soy-titulo">
+      <div class="container">
+        <h2 id="quien-soy-titulo">Quién soy</h2>
+        <!-- Aquí irá un párrafo corto de presentación -->
+      </div>
+    </section>
+
+    <section id="trayectoria" aria-labelledby="trayectoria-titulo">
+      <div class="container">
+        <h2 id="trayectoria-titulo">Trayectoria</h2>
+        <!-- Aquí irá la línea de tiempo: DAM → consultora → IA y Big Data -->
+      </div>
+    </section>
+
+    <section id="proyectos" aria-labelledby="proyectos-titulo">
+      <div class="container">
+        <h2 id="proyectos-titulo">Proyectos</h2>
+        <!-- main.js pinta aquí las tarjetas usando los datos de projects.js -->
+        <div class="projects-grid" id="projects-list"></div>
+      </div>
+    </section>
+
+    <section id="contacto" aria-labelledby="contacto-titulo">
+      <div class="container">
+        <h2 id="contacto-titulo">Contacto</h2>
+        <!-- Aquí irán email, LinkedIn y GitHub -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> Nain Iglesias</p>
+    </div>
+  </footer>
+
+  <script src="js/projects.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
