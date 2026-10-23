@@ -118,6 +118,47 @@ section {
   font-size: 1.125rem;
 }
 
+.timeline {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-left: 2px solid var(--color-border);
+}
+
+.timeline-item {
+  position: relative;
+  padding: 0 0 calc(var(--space) * 2) calc(var(--space) * 1.5);
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  top: 0.35rem;
+  left: -7px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+}
+
+.timeline-item h3 {
+  margin: 0.25rem 0;
+}
+
+.timeline-item p {
+  margin: 0;
+}
+
+.timeline-date {
+  color: var(--color-primary);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
 .services-grid,
 .projects-grid {
   display: grid;
