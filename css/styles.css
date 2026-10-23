@@ -113,6 +113,11 @@ section {
   outline-offset: 2px;
 }
 
+.about-text {
+  max-width: 65ch;
+  font-size: 1.125rem;
+}
+
 .services-grid,
 .projects-grid {
   display: grid;
