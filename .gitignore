@@ -24,3 +24,6 @@ desktop.ini
 
 # Dependencias (no se usan, pero por si acaso)
 node_modules/
+
+# Instrucciones locales para Claude Code
+CLAUDE.md
