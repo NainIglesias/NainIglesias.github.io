@@ -113,11 +113,13 @@ section {
   outline-offset: 2px;
 }
 
+.services-grid,
 .projects-grid {
   display: grid;
   gap: var(--space);
 }
 
+.card,
 .project-card {
   padding: calc(var(--space) * 1.5);
   border: 1px solid var(--color-border);
@@ -125,6 +127,7 @@ section {
   background-color: var(--color-surface);
 }
 
+.card h3,
 .project-card h3 {
   margin-top: 0;
 }
@@ -144,6 +147,10 @@ section {
 @media (min-width: 768px) {
   .hero h1 {
     font-size: 3.5rem;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .projects-grid {
