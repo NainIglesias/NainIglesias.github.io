@@ -1,0 +1,175 @@
+/* ==========================================================
+   Variables: colores, tipografía y espaciados
+   ========================================================== */
+:root {
+  /* Modo claro (por defecto) */
+  --color-bg: #f8fafc;
+  --color-surface: #ffffff;
+  --color-text: #0f172a;
+  --color-text-muted: #475569;
+  --color-primary: #4f46e5;
+  --color-primary-text: #ffffff;
+  --color-border: #e2e8f0;
+
+  --font-base: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --radius: 12px;
+  --space: 1rem;
+  --max-width: 960px;
+}
+
+/* Modo oscuro: se activa según la preferencia del sistema */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #0f172a;
+    --color-surface: #1e293b;
+    --color-text: #f1f5f9;
+    --color-text-muted: #94a3b8;
+    --color-primary: #818cf8;
+    --color-primary-text: #0f172a;
+    --color-border: #334155;
+  }
+}
+
+/* ==========================================================
+   Base
+   ========================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-base);
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--color-primary);
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space);
+}
+
+section {
+  padding: calc(var(--space) * 3) 0;
+}
+
+/* ==========================================================
+   Hero
+   ========================================================== */
+.hero {
+  padding: calc(var(--space) * 5) 0 calc(var(--space) * 3);
+  text-align: center;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.hero-role {
+  margin: calc(var(--space) / 2) 0 calc(var(--space) * 2);
+  font-size: 1.125rem;
+  color: var(--color-text-muted);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space);
+}
+
+/* ==========================================================
+   Botones
+   ========================================================== */
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid var(--color-primary);
+  border-radius: var(--radius);
+  background-color: var(--color-primary);
+  color: var(--color-primary-text);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.button-secondary {
+  background-color: transparent;
+  color: var(--color-primary);
+}
+
+.button:focus-visible {
+  outline: 3px solid var(--color-text);
+  outline-offset: 2px;
+}
+
+/* ==========================================================
+   Proyectos
+   ========================================================== */
+.projects-grid {
+  display: grid;
+  gap: var(--space);
+}
+
+.project-card {
+  padding: calc(var(--space) * 1.5);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background-color: var(--color-surface);
+}
+
+.project-card h3 {
+  margin-top: 0;
+}
+
+.project-stack {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+/* ==========================================================
+   Footer
+   ========================================================== */
+.footer {
+  padding: calc(var(--space) * 2) 0;
+  border-top: 1px solid var(--color-border);
+  text-align: center;
+  color: var(--color-text-muted);
+}
+
+/* ==========================================================
+   Pantallas más grandes (mobile-first)
+   ========================================================== */
+@media (min-width: 768px) {
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
