@@ -143,8 +143,7 @@ function placeModal() {
     left = 16;
   }
 
-  let top = card.top + card.height / 2 - height / 2;
-  top = Math.min(Math.max(16, top), window.innerHeight - height - 16);
+  const top = Math.max(16, (window.innerHeight - height) / 2);
 
   modal.style.left = left + "px";
   modal.style.top = top + "px";
