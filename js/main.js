@@ -37,4 +37,51 @@ function renderProjects() {
   });
 }
 
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+let skipIntro = reduceMotion;
+
+function wait(milliseconds) {
+  return new Promise(function (resolve) {
+    setTimeout(resolve, skipIntro ? 0 : milliseconds);
+  });
+}
+
+async function typeStep(step) {
+  const typed = step.querySelector(".typed");
+  const command = typed.textContent;
+  typed.textContent = "";
+  step.classList.add("is-shown");
+
+  for (const letter of command) {
+    typed.textContent += letter;
+    await wait(22);
+  }
+
+  await wait(120);
+  step.classList.add("is-done");
+  await wait(140);
+}
+
+async function playIntro() {
+  await wait(500);
+
+  for (const step of document.querySelectorAll(".step")) {
+    await typeStep(step);
+  }
+
+  for (const card of document.querySelectorAll(".project-card")) {
+    card.classList.add("is-shown");
+    await wait(110);
+  }
+
+  document.getElementById("skip-hint").hidden = true;
+}
+
+function stopIntro() {
+  skipIntro = true;
+}
+
 renderProjects();
+document.addEventListener("keydown", stopIntro, { once: true });
+document.addEventListener("pointerdown", stopIntro, { once: true });
+playIntro();

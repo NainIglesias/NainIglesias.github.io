@@ -222,6 +222,73 @@ h1 {
   color: var(--color-muted);
 }
 
+.skip-hint {
+  padding: 8px 18px 0;
+  color: var(--color-muted);
+  font-size: 12px;
+  text-align: right;
+}
+
+.skip-hint[hidden] {
+  display: none;
+}
+
+.js .shell {
+  animation: power-on 0.6s ease-out backwards;
+}
+
+.js .step {
+  opacity: 0;
+}
+
+.js .step.is-shown {
+  opacity: 1;
+}
+
+.js .output {
+  opacity: 0;
+  translate: 0 6px;
+  transition: opacity 0.35s, translate 0.35s;
+}
+
+.js .step.is-done .output {
+  opacity: 1;
+  translate: 0 0;
+}
+
+.js .project-card {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.js .project-card.is-shown {
+  pointer-events: auto;
+  animation: boot 0.45s ease-out both;
+}
+
+@keyframes power-on {
+  from {
+    opacity: 0;
+    filter: brightness(2.5);
+  }
+}
+
+@keyframes boot {
+  from {
+    opacity: 0;
+    translate: 0 12px;
+  }
+
+  60% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
 @media (min-width: 720px) {
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -237,5 +304,18 @@ h1 {
     grid-template-columns: 380px 1fr;
     gap: 40px;
     padding: 28px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .js .project-card {
+    opacity: 1;
   }
 }
