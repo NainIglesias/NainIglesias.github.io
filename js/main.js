@@ -125,7 +125,6 @@ function placeModal() {
   if (window.innerWidth < 760) {
     modal.classList.add("is-sheet");
     modal.style.left = "";
-    modal.style.top = "";
     return;
   }
 
@@ -133,7 +132,6 @@ function placeModal() {
   const gap = 24;
   const card = activeCard.getBoundingClientRect();
   const width = modal.offsetWidth;
-  const height = modal.offsetHeight;
 
   let left = card.right + gap;
   if (left + width > window.innerWidth - 16) {
@@ -143,10 +141,7 @@ function placeModal() {
     left = 16;
   }
 
-  const top = Math.max(16, (window.innerHeight - height) / 2);
-
   modal.style.left = left + "px";
-  modal.style.top = top + "px";
 }
 
 function openModal(card) {
