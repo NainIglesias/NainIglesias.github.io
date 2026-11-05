@@ -59,16 +59,16 @@ async function typeStep(step) {
       break;
     }
     typed.textContent += letter;
-    await wait(22);
+    await wait(10);
   }
 
-  await wait(120);
+  await wait(50);
   step.classList.add("is-done");
-  await wait(140);
+  await wait(60);
 }
 
 async function playIntro() {
-  await wait(500);
+  await wait(150);
 
   for (const step of document.querySelectorAll(".step")) {
     await typeStep(step);
@@ -76,7 +76,7 @@ async function playIntro() {
 
   for (const card of document.querySelectorAll(".project-card")) {
     card.classList.add("is-shown");
-    await wait(110);
+    await wait(50);
   }
 
   document.getElementById("skip-hint").hidden = true;
