@@ -19,6 +19,7 @@ function createRepoInfo(project) {
 
 function renderProjects() {
   const list = document.getElementById("projects-list");
+  document.getElementById("projects-count").textContent = projects.length;
 
   projects.forEach(function (project, index) {
     const card = createElement("article", "project-card");

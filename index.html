@@ -5,96 +5,93 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nain Iglesias · Backend Developer</title>
   <meta name="description" content="Nain Iglesias, desarrollador backend en Vigo especializado en Symfony, APIs REST e IA.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <header class="hero" id="home">
-    <div class="container">
-      <h1>Nain Iglesias</h1>
-      <p class="hero-role">Backend Developer · Symfony · IA</p>
-      <div class="hero-actions">
-        <a class="button" href="#projects">Ver proyectos</a>
-        <a class="button button-secondary" href="#contact">Contacto</a>
-      </div>
+  <div class="shell">
+    <div class="window-bar" aria-hidden="true">
+      <span></span><span></span><span></span>
+      <p>nain@vigo: ~/portfolio</p>
     </div>
-  </header>
 
-  <main>
-    <section id="services" aria-labelledby="services-title">
-      <div class="container">
-        <h2 id="services-title">Qué hago</h2>
-        <div class="services-grid">
-          <article class="card">
-            <h3>APIs y backend con Symfony</h3>
-            <p>Diseño y desarrollo APIs REST con Symfony, Doctrine y PostgreSQL, con procesos asíncronos en Symfony Messenger y tests con PHPUnit.</p>
-          </article>
-          <article class="card">
-            <h3>Docker y despliegue</h3>
-            <p>Preparo entornos con Docker para que el proyecto funcione igual en local que en producción y sea fácil de desplegar.</p>
-          </article>
-          <article class="card">
-            <h3>Agentes e IA</h3>
-            <p>Construyo agentes y automatizaciones con modelos de lenguaje mientras me especializo en IA y Big Data.</p>
-          </article>
+    <main class="layout">
+      <section class="profile" aria-label="Sobre mí">
+        <div class="step">
+          <p class="prompt" aria-hidden="true"><b>nain@vigo</b>:~$ <span class="typed">whoami</span></p>
+          <div class="output">
+            <h1>Nain Iglesias</h1>
+          </div>
         </div>
-      </div>
-    </section>
 
-    <section id="about" aria-labelledby="about-title">
-      <div class="container">
-        <h2 id="about-title">Quién soy</h2>
-        <p class="about-text">Soy Nain, desarrollador backend en Vigo. Llevo unos dos años trabajando con PHP y Symfony en una consultora, construyendo APIs y servicios que tienen que funcionar bien en producción. Empecé con Java y Spring Boot en el ciclo de DAM y ahora estoy haciendo la especialización en IA y Big Data, donde estoy creando mis propios proyectos de desarrollo agéntico. Me gusta el código claro, entender bien el problema antes de escribir una línea y seguir aprendiendo cada día.</p>
-      </div>
-    </section>
+        <div class="step">
+          <p class="prompt" aria-hidden="true"><b>nain@vigo</b>:~$ <span class="typed">cat rol.txt</span></p>
+          <div class="output">
+            <p class="role">Backend Developer · Symfony · IA</p>
+            <p>📍 Vigo, Galicia</p>
+          </div>
+        </div>
 
-    <section id="timeline" aria-labelledby="timeline-title">
-      <div class="container">
-        <h2 id="timeline-title">Trayectoria</h2>
-        <ol class="timeline">
-          <li class="timeline-item">
-            <p class="timeline-date">2022 – 2024</p>
-            <h3>Técnico Superior en DAM</h3>
-            <p>Desarrollo de Aplicaciones Multiplataforma, con proyectos en Java y Spring Boot.</p>
-          </li>
-          <li class="timeline-item">
-            <p class="timeline-date">2024 – 2026</p>
-            <h3>Backend Developer en una consultora</h3>
-            <p>Desarrollo de APIs REST con PHP y Symfony, Symfony Messenger, Doctrine ORM/ODM, PostgreSQL, Docker y PHPUnit.</p>
-          </li>
-          <li class="timeline-item">
-            <p class="timeline-date">Actualidad</p>
-            <h3>Especialización en IA y Big Data</h3>
-            <p>Formación en inteligencia artificial y datos, construyendo proyectos de desarrollo agéntico.</p>
-          </li>
-        </ol>
-      </div>
-    </section>
+        <div class="step">
+          <p class="prompt" aria-hidden="true"><b>nain@vigo</b>:~$ <span class="typed">cat sobre-mi.md</span></p>
+          <div class="output">
+            <p>Dos años construyendo APIs REST con PHP y Symfony en una consultora. Ahora me especializo en IA y Big Data y trabajo a diario con agentes de código.</p>
+          </div>
+        </div>
 
-    <section id="projects" aria-labelledby="projects-title">
-      <div class="container">
-        <h2 id="projects-title">Proyectos</h2>
+        <div class="step">
+          <p class="prompt" aria-hidden="true"><b>nain@vigo</b>:~$ <span class="typed">ls stack/</span></p>
+          <div class="output">
+            <ul class="chips" aria-label="Stack">
+              <li>PHP</li>
+              <li>Symfony</li>
+              <li>Doctrine</li>
+              <li>Messenger</li>
+              <li>PostgreSQL</li>
+              <li>Docker</li>
+              <li>PHPUnit</li>
+              <li>Python</li>
+              <li>Java</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="step">
+          <p class="prompt" aria-hidden="true"><b>nain@vigo</b>:~$ <span class="typed">git log --oneline trayectoria</span></p>
+          <div class="output">
+            <ol class="log" aria-label="Trayectoria">
+              <li><b>2022 – 2024</b> Técnico Superior en DAM</li>
+              <li><b>2024 – 2026</b> Backend Symfony en consultora</li>
+              <li><b>Ahora</b> Especialización IA y Big Data</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="step" id="contact">
+          <p class="prompt" aria-hidden="true"><b>nain@vigo</b>:~$ <span class="typed">open contacto</span></p>
+          <div class="output">
+            <ul class="links" aria-label="Contacto">
+              <li><a href="https://github.com/NainIglesias" target="_blank" rel="noopener noreferrer">[github]</a></li>
+              <li><a href="https://www.linkedin.com/in/nain-iglesias-a8a4762ab" target="_blank" rel="noopener noreferrer">[linkedin]</a></li>
+              <li><a href="mailto:email@ejemplo.com">[email]</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="projects" id="projects" aria-labelledby="projects-title">
+        <div class="step">
+          <p class="prompt" aria-hidden="true"><b>nain@vigo</b>:~$ <span class="typed">ls -la proyectos/</span></p>
+          <div class="output">
+            <h2 class="projects-title" id="projects-title">total <span id="projects-count"></span> proyectos</h2>
+          </div>
+        </div>
         <div class="projects-grid" id="projects-list"></div>
-      </div>
-    </section>
-
-    <section id="contact" aria-labelledby="contact-title">
-      <div class="container">
-        <h2 id="contact-title">Contacto</h2>
-        <p>¿Tienes un proyecto o una oferta en mente? Escríbeme y hablamos.</p>
-        <ul class="contact-list">
-          <li><a class="button" href="mailto:email@ejemplo.com">Email</a></li>
-          <li><a class="button button-secondary" href="https://www.linkedin.com/in/tu-usuario" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-          <li><a class="button button-secondary" href="https://github.com/NainIglesias" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-        </ul>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container">
-      <p>© <span id="year"></span> Nain Iglesias</p>
-    </div>
-  </footer>
+      </section>
+    </main>
+  </div>
 
   <script src="js/projects.js"></script>
   <script src="js/main.js"></script>
