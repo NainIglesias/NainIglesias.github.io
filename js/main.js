@@ -7,10 +7,10 @@ function createElement(tag, className, text) {
 
 function createRepoInfo(project) {
   if (!project.github) {
-    return createElement("span", "repo-private", "🔒 Repositorio privado");
+    return createElement("span", "repo-private", "🔒 Private repository");
   }
 
-  const link = createElement("a", "repo-link", "→ ver en GitHub");
+  const link = createElement("a", "repo-link", "→ view on GitHub");
   link.href = project.github;
   link.target = "_blank";
   link.rel = "noopener noreferrer";
